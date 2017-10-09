@@ -27,10 +27,6 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         final String leftNum = mLeftEditText.getText().toString();
         final String rightNum = mRightEditText.getText().toString();
 
-        if(leftNum.isEmpty() || rightNum.isEmpty()){
-            return;
-        }
-
         String result ="";
 
         mCalculator= new Calculator(this);
