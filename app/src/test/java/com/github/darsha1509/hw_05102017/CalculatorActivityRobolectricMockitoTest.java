@@ -14,7 +14,6 @@ import org.robolectric.android.controller.ActivityController;
 import org.robolectric.annotation.Config;
 
 import static junit.framework.Assert.assertEquals;
-import static org.mockito.Matchers.anyShort;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
@@ -30,10 +29,10 @@ public class CalculatorActivityRobolectricMockitoTest {
 
     private ActivityController<CalculatorActivity> activityController;
 
-    EditText leftEditText;
-    EditText rightEditText;
+    private EditText leftEditText;
+    private EditText rightEditText;
 
-    CalculatorActivity calculatorActivity;
+    private CalculatorActivity calculatorActivity;
 
     @Before
     public void onInit(){
@@ -67,11 +66,11 @@ public class CalculatorActivityRobolectricMockitoTest {
         leftEditText.setText("2");
         rightEditText.setText("3");
 
-        Button difBtn = (Button) calculatorActivity.findViewById(R.id.dif_btn);
+        final Button difBtn = (Button) calculatorActivity.findViewById(R.id.dif_btn);
         difBtn.performClick();
 
-        TextView resultTextView = (TextView)calculatorActivity.findViewById(R.id.result_text_view);
-        String result = resultTextView.getText().toString();
+        final TextView resultTextView = (TextView)calculatorActivity.findViewById(R.id.result_text_view);
+        final String result = resultTextView.getText().toString();
 
         assertEquals(mSpyCalculator.difference("2", "3"), result);
         verify(mSpyCalculator).difference("2", "3");
