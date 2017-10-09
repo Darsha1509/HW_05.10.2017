@@ -25,6 +25,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(final View pView) {
 
+
         final String leftNum = mLeftEditText.getText().toString();
         final String rightNum = mRightEditText.getText().toString();
 
@@ -69,10 +70,5 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         mDifBtn.setOnClickListener(this);
         mMultBtn.setOnClickListener(this);
         mDivBtn.setOnClickListener(this);
-
-        Log.d(LOG_TAG, "onCreate()");
     }
-
-
-
 }
