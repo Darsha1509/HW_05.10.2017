@@ -13,27 +13,27 @@ class Calculator implements ICalculator{
 
     @Override
     public String add(final String value_1, final String value_2) {
-        final int result = Integer.parseInt(value_1)+Integer.parseInt(value_2);
+        final float result = Float.parseFloat(value_1)+Float.parseFloat(value_2);
         return String.valueOf(result);
     }
 
     @Override
     public String difference(final String value_1, final String value_2) {
-        final int result = Integer.parseInt(value_1)-Integer.parseInt(value_2);
+        final float result = Float.parseFloat(value_1)-Float.parseFloat(value_2);
         return String.valueOf(result);
     }
 
     @Override
     public String multiply(final String value_1, final String value_2) {
-        final int result = Integer.parseInt(value_1)*Integer.parseInt(value_2);
+        final float result = Float.parseFloat(value_1)*Float.parseFloat(value_2);
         return String.valueOf(result);
     }
 
     @Override
     public String division(final String value_1, final String value_2) {
-        int result = 0;
+        float result = 0;
         if(!"0".equals(value_2)){
-            result = Integer.parseInt(value_1)/Integer.parseInt(value_2);
+            result = Float.parseFloat(value_1)/Float.parseFloat(value_2);
         }else{
             Toast.makeText(context, context.getString(R.string.div_0), Toast.LENGTH_SHORT).show();
         }

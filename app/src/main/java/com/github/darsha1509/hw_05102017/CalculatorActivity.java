@@ -34,6 +34,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         String result ="";
 
         mCalculator= new Calculator(this);
+
         switch(pView.getId()){
             case R.id.add_btn:
                 result = mCalculator.add(leftNum, rightNum);
