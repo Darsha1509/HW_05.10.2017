@@ -5,11 +5,7 @@ import android.widget.Toast;
 
 class Calculator implements ICalculator {
 
-    private final Context context;
-
-    Calculator(final Context pContext) {
-        context = pContext;
-    }
+    Context context;
 
     @Override
     public String add(final String value_1, final String value_2) {
