@@ -11,7 +11,7 @@ import static junit.framework.Assert.assertEquals;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class, sdk = 26)
-public class CalculatorTest {
+public class CalculatorRobolectricTest {
 
     private ICalculator mCalculator;
 
